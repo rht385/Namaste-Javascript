@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.topnav {
+    background-color: rgb(197, 247, 242);
+    overflow: hidden;
+    display: flex;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    color: #0e0d0d;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav a:hover{
+    font-size: 18px;
+  }
+
+  .topnav img{
+      height: 50px;
+      width: 50px;
+      margin: 0px 20px;
+      border-radius: 50%;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav .home {
+    background-color: #faf5aa;
+    color: rgb(240, 89, 20);
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+
+  .content{
+      text-align: center;
+      color: white;
+      background-color: rgb(24, 24, 51);
+      height: 100px;
+  }
+
+  .main{
+      margin: 0px 10px;
+      padding: 10px;
+  }
+
+  .multi-variation{
+    background: url('/img/bg1.jpg');
+    background-repeat: no-repeat;
+    height: 50%;
+    padding: 10px 10px;
+    color: rgb(5, 5, 5);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+  }
+
+  .multi-variation div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 18px;
+    border: 1px solid red;
+    background-color: rgb(205, 247, 242);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+  }
+
+  .multi-variation div h1{
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .multi-variation div p{
+      text-align: center;
+      font-size: 15px;
+  }
+
+  .multi-variation div button {
+      margin: 40px 0px 0px 0px;
+      width: 70px;
+      height: 30px;
+      background: chartreuse;
+      cursor: pointer;
+  }
+
+  .multi-variation div button:hover{
+    width: 75px;
+      height: 32px;
+  }
+
+  .multi-variation div img{
+      max-width: 200px;
+      max-height: 50%;
+  }
+
+  .multi-variation div img:hover{
+    transform: rotate(5deg);
+  }
+
+  .contact{
+    position: relative;
+    
+  }
+  .contact::before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    background: url('/img/contact.jpg') no-repeat center center/cover;
+  }
+
+  .contact h1{
+    text-align: center;
+  }
+  
+  .contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+
+.contact-box input, 
+.contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+} 
+
+.contact-box form{
+  width: 40%;
+}
+
+.contact-box label{
+  font-size: 1.3rem;
+  font-family: 'Bree Serif', serif;
+
+}
+
+.footer{
+  text-align: center;
+}
+
+@media only screen and (max-width: 840px) {
+  .multi-variation{
+  grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+  @media (max-width: 640px){
+    .topnav{
+      flex-direction: column;
+    }
+
+    .topnav img{
+      justify-content: center;
+      align-items: center;
+      margin-left: 45%;
+    }
+
+    .multi-variation{
+        grid-template-columns: repeat(1, 1fr);
+        height: 50%;
+        background-repeat: repeat;
+    }
+
+    .contact-box form{
+      width:80%;
+  }
+
+  }
